@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website--2</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconsFont.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style-slider.css">
+</head>
+<body>
+    <header class="cps-header">
+        <div class="cps-header__burger">
+            <span></span>
+        </div>
+        <a href="#" class="cps-header__logo logo">
+            <picture>
+                <img class="logo__img" src="img/cps-logo-img.svg" alt="cps logo">
+            </picture>
+        </a>
+        <ul class="cps-header__contacts contacts-container">
+            <li class="contacts-container__item">
+                <button class="contacts-container__link button icon-phone"></button>
+            </li>
+            <li class="contacts-container__item">
+                <button class="contacts-container__link button icon-pop-up"></button>
+            </li>
+            <li class="contacts-container">
+                <button class="contacts-container__link button icon-user"></button>
+            </li>
+        </ul>
+        <ul class="cps-header__fb fb-container">
+            <li class="fb-container__item">
+                <button class="fb-container__link button icon-service"></button>
+            </li>
+            <li class="fb-container__item">
+                <button class="fb-container__link button icon-search-2"></button>
+            </li>
+        </ul>           
+    </header>
+    <aside class="cps-aside">
+        <div class="cps-aside__header">
+            <a href="#" class="cps-aside__logo cps-logo">
+                <picture>
+                    <img src="img/cps-logo-img.svg" alt="cps logo" class="cps-logo__img">
+                </picture>
+            </a>
+            <button class="cps-aside__search button icon-search"></button>
+        </div>
+        <nav class="cps-aside__nav-aside nav-menu">
+            <ul class="nav-menu__list">
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Ремонт техники</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link nav-menu__link-active">Услуги и Сервисы</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Корпоративным клиентам</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Продавцам техники</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Партнерам</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Производителям</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Наши сервисные центры</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="cps-aside__contacts contacts-container">
+            <li class="contacts-container__item">
+                <button class="contacts-container__btn button icon-phone"></button>
+            </li>
+            <li class="contacts-container__item">
+                <button class="contacts-container__btn button icon-pop-up"></button>
+            </li>
+            <li class="contacts-container__item">
+                <button class="contacts-container__btn button icon-user"></button>
+            </li>
+        </ul> 
+        <ul class="cps-aside__contacts-list contacts-list">
+            <li class="contacts-list__item">
+                <a href="mailto:mail@cps.com" class="contacts-list__link contacts-list__e-mail">mail@cps.com</a>
+            </li>
+            <li class="contacts-list__item">
+                <a href="tel:88008908900" class="contacts-list__link contacts-list__phone">8 800 890 8900</a>
+            </li>
+        </ul>
+        <ul class="cps-aside__language-container language-list">
+            <li class="language-list__item">
+                <a href="#" class="language-list__link language-list__link-active">ru</a>
+            </li>
+            <li class="language-list__item">
+                <a href="#" class="language-list__link">en</a>
+            </li>
+            <li class="language-list__item">
+                <a href="#" class="language-list__link">ch</a>
+            </li>
+        </ul>
+    </aside>
+    <main class="cps-main">
+        <section class="service-content">
+            <div class="service-content__header">
+                <h1 class="service-content__title">Услуги и сервисы</h1>
+            </div>
+            <div class="swiper mySwiper slider-service">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-service__item">
+                        <a class="slider-service__link" href="#">Ремонтируемые устройства</a>
+                    </div>
+                    <div class="swiper-slide slider-service__item">
+                        <a class="slider-service__link" href="#">Цены на услуги</a>
+                    </div>
+                    <div class="swiper-slide slider-service__item">
+                        <a class="slider-service__link" href="#">Адреса сервисных центров</a>
+                    </div>
+                    <div class="swiper-slide slider-service__item">
+                        <a class="slider-service__link" href="#">Специальные цены</a>
+                    </div>
+                    <div class="swiper-slide slider-service__item">
+                        <a class="slider-service__link" href="#">Отзывы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-content__service-item service-item">
+                <div class="service-item__container">
+                    <p class="service-item__text"> Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p><br>
+                    <p class="service-item__text service-item__text-block" id="text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
+                      в свою очередь, советуют нас родным и близким.</p>
+                    <button class="service-item__btn" id="button" onclick="openbox('text'); return false">Читать далее
+                    </button>
+                </div>
+                <img class="service-item__img" src="img/service.png" alt="service">
+            </div>
+        </section> 
+        <section class="service-brands">
+            <h2 class="service-brands__title">
+                Ремонт техники различных брендов
+            </h2>
+            <div class="swiper mySwiper slider-brands">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link " href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_lenovo.png" alt="Lenovo">
+                            <button class="slider-brands__btn  button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                    <a class="slider-brands__link" href="#">
+                        <img class="slider-brands__img" src="img/slider-brands_samsung.png" alt="Samsung">
+                        <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link" href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_apple.png" alt="Apple">
+                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link" href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_viewsonic.png" alt="ViewSonic">
+                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link" href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_bosch.png" alt="Bosch">
+                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link" href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_hp.png" alt="Hp">
+                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link" href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_acer.png" alt="Acer">
+                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-brands__item">
+                        <a class="slider-brands__link" href="#">
+                            <img class="slider-brands__img" src="img/slider-brands_sony.svg" alt="Sony">
+                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="service-type">
+            <h2 class="service-type__title">
+                Ремонт различных видов техники
+            </h2>
+            <div class="swiper mySwiper slider-type">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-type__item">
+                        <a href="#" class="slider-type__link">
+                            <h3 class="slider-type__text">Ремонт ноутбуков</h3>
+                            <button class="slider-type__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-type__item">
+                        <a href="#" class="slider-type__link">
+                            <h3 class="slider-type__text">Ремонт планшетов</h3>
+                            <button class="slider-type__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                    <div class="swiper-slide slider-type__item">
+                        <a href="#" class="slider-type__link">
+                            <h3 class="slider-type__text">Ремонт ПК</h3>
+                            <button class="slider-type__btn button-arrow icon-arrow"></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="service-price">
+            <h2 class="service-price__title">
+                Цены на услуги
+            </h2>
+            <div class="swiper mySwiper slider-price">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-price__item">
+                        <a href="#" class="slider-price__link">
+                            <div class="slider-price__list price-list">
+                                <li class="price-list__item-header">
+                                    <h3 class="price-list__title">Ремонтные услуги</h3>
+                                    <span class="price-list__subtitle">Диагностика</span>
+                                </li>
+                                <li class="price-list__item-main">
+                                    <h3 class="price-list__title">Цена</h3>
+                                    <span class="price-list__subtitle">Бесплатно</span>
+                                </li>
+                                <li class="price-list__item-footer">
+                                    <div class="price-list__container">
+                                        <h3 class="price-list__title">Срок</h3>
+                                        <span class="price-list__subtitle">30 мин</span>
+                                    </div>
+                                    <a href="#" class="price-list__link">заказать</a>
+                                </li>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="service-price__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+            <a href="#" class="service-price__link">Получить коммерческое предложение</a>   
+        </section>
+    </main> 
+    <footer class="cps-footer">
+            <ul class="cps-footer__footer-list footer-list">
+                <li class="footer-list__item footer-list__container">
+                    <span>© 2019 CPS</span>
+                    <a class="footer-list__link" href="https://apesong.ru/" target="_blank">Разработано командой Apesong</a>
+                </li>
+                <li class="footer-list__item">
+                    <a class="footer-list__link" href="#">Политика конфиденциальности</a>
+                </li>
+                <li class="footer-list__item">Информация, размещена на данной странице, не является публичной офертой</li>
+            </ul>
+    </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/initialize-swiper.js"></script>
+    <script src="js/read-more.js"></script>
+</body>
+</html>

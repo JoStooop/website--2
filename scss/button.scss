@@ -1,0 +1,24 @@
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $btnColor;
+    width: 40px;
+    height: 40px;
+    color: #FFFFFF;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+    color: $btnColor;
+    border: 1px solid $btnColor;
+}
+
+.button:active {
+    background-color: $btnColor;
+    color: #ffffff;
+}

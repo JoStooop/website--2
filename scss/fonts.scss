@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'ttlakes';
+    src: url('../fonts/ttlakes-bold.woff2') format('woff2'),
+         url('../fonts/ttlakes-bold.woff') format('woff'),
+         url('../fonts/ttlakes-bold.ttf') format('ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'ttlakes';
+    src: url('../fonts/ttlakes-medium.woff2') format('woff2'),
+         url('../fonts/ttlakes-medium.woff') format('woff'),
+         url('../fonts/ttlakes-medium.ttf') format('ttf');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'ttlakes';
+    src: url('../fonts/ttlakes-regular.woff2') format('woff2'),
+         url('../fonts/ttlakes-regular.woff') format('woff'),
+         url('../fonts/ttlakes-regular.ttf') format('ttf');
+    font-style: normal;
+    font-weight: 400;
+}
