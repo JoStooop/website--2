@@ -4,7 +4,7 @@ const swiperService = new Swiper('.swiper-service--nav', {
   // slidesPerView: 4,
   width: 250,
   // spaceBetween: 40,
-  // slideToClickedSlide: true,
+  slideToClickedSlide: true,
 
 
   // Responsive breakpoints
@@ -72,6 +72,37 @@ const swiperBrands = new Swiper('.swiper-brands--nav', {
 
 
 const swiperType = new Swiper('.swiper-type--nav', {
+
+  // slidesPerView: 4,
+  width: 250,
+  // spaceBetween: 40,
+ 
+
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is <= 320px
+    320: {
+      width: 250,
+      spaceBetween: 10
+      
+    },
+    // when window width is <= 480px
+    480: {
+      width: 250,
+      spaceBetween: 20,
+    },
+    // when window width is <= 640px
+    640: {
+      width: 250,
+      spaceBetween: 30
+    }
+  }
+})
+
+
+
+
+const swiperPrice = new Swiper('.swiper-price--nav', {
 
   // slidesPerView: 4,
   width: 250,

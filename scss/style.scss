@@ -363,6 +363,7 @@ body{
                 border-radius: 2px;
             }
         }
+
         &__item{
             display: flex;
             align-items: center;
@@ -439,6 +440,7 @@ body{
             }
         }
     }
+
     .service-brands{
 
         &__title{
@@ -467,6 +469,7 @@ body{
                 border-radius: 6px;
                 padding: 20px 116px 20px 16px;
                 background-color: #ffffff;
+                cursor: pointer;
             }
 
             &__link{
@@ -474,12 +477,45 @@ body{
             }
 
             &__btn{
-                top: 14px;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border: 1px solid $btnColor;
+                border-radius: 100%;
+                color: $btnColor;
+                transition-duration: .4s;
+                top: 15px;
                 left: 190px;
+
+                &::after{
+                    content: "\e900";
+                }
+
+                &:hover{
+                    background-color: $btnColor;
+                }
+
+                &:hover::after{
+                    color: #fff;
+                }
+
+                &:active{
+                    background-color: #fff;
+                }
+
+                &:active::after{
+                    color: $btnColor;
+                }
             }
         }
 
     }
+
+    // Секция - Брендов от 768px 
+    .service-brands-tab{
+        display: none;
+    }
+    
     .service-type{
         margin-bottom: 20px;
 
@@ -508,6 +544,8 @@ body{
                 border: 1px solid #EAEAEA;
                 border-radius: 6px;
                 background-color: #ffffff;
+                cursor: pointer;
+
             }
 
             &__link{
@@ -528,18 +566,43 @@ body{
                 width: 40px;
                 height: 40px;
                 border-radius: 100%;
-                border: 1px solid #000;
+                border: 1px solid #FF3E79;
                 top: 100px;
                 left: 190px;
 
-
                 &::after{
                     content: '\e900';
-                    
+                    color: #FF3E79;
+                    position: absolute;
+                    top: 10px;
+                    left: 15px;  
+                }
+
+                &:hover{
+                    background-color: #FF3E79;
+                    transition-duration: .7s;
+                }
+
+                &:hover::after{
+                    color: #fff;
+                }
+
+                &:active{
+                    background-color: #fff;
+                }
+
+                &:active::after{
+                    color: #FF3E79;
                 }
             }
         }
     }
+
+    // Секция - Ремонт различных видов техники от 768px 
+    .service-type-tab{
+        display: none;
+    }
+
     .service-price{
         margin-bottom: 20px;
 
@@ -556,7 +619,7 @@ body{
             border-top: 2px solid #D9FFF5;
         }
 
-        .slider-price{
+        .swiper-price--nav{
             margin-bottom: 20px;
 
             
@@ -575,15 +638,14 @@ body{
                 color: $txtColor;
             }
 
-            .price-list{
+            .price-link{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-between;
                 padding: 16px;
+                cursor: pointer;
+                height: 100%;
 
-                &__item-header{
-                    margin-bottom: 25px;
-                }
                 &__title{
                     font-weight: 400;
                     font-size: 14px;
@@ -598,19 +660,8 @@ body{
                     line-height: 18px;
                 }
 
-                &__item-main{
-                    margin-bottom: 25px;
-
-                }
-
-                &__item-footer{
-                    display: flex;
-                }
-
-                &__link{
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
+                &__btn{
+                    position: absolute;
                     align-items: center;
                     border: 1px solid  #FF3E79;
                     color: #fff;
@@ -620,23 +671,31 @@ body{
                     border-radius: 50px;
                     cursor: pointer;
                     font-size: 12px;
-                    top: 9px;
-                    left: 47px;
+                    top: 155px;
+                    left: 115px;
                     text-transform: uppercase;
                     font-size: 12px;
                     line-height: 24px;
-                    font-weight: 700;
-                    &::before{
-                        content: url(../img/arrow.svg);
+                    font-weight: 700; 
+                    transition-duration: 0.7s;
+
+                    
+                    &::after{
+                        content: '\e900';
                         position: absolute;
-                        top: 4px;
-                        left: 99px;
+                        top: 9px;
+                        left: 100px;
                     }
+
                     &:hover{
                         background-color: #fff;
                         color: #FF3E79;
-                        transition-duration: .5s;
-                    }        
+                    }
+
+                    &:active{
+                        background-color: #FF3E79;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -672,16 +731,21 @@ body{
                 left: 107px;
                 font-size: 13px;
                 color: #FF3E79;
-
             }
 
             &:hover{
                 color: $aimColor;
             }
+
             &:hover:after{
                 color: $aimColor;
             }
         }
+    }
+
+    // Секция - Цена на услуги от 768px
+    .service-price-tab{
+        display: none;
     }
 }
 
@@ -1833,45 +1897,317 @@ body{
 
     .cps-main{
 
-        
-        
-        .service-item{
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-            margin: 15px 15px 0;
+        .service-content{
 
-            &__text{
-                margin: 0px;
+            .service-item{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: row;
+                margin: 15px 15px 0;
+
+                &__text{
+                    margin: 0px;
+                }
+
+                &__container{
+                    padding: 0 24px;
+                    width: 70%;
+                }
+
+                &__img{
+                    border-radius: 6px;
+
+                }
+            }  
+        }
+
+        // Слайдер скрыт после 768px
+        .swiper-brands--nav{
+            display: none;
+        }
+
+        .service-brands-tab{
+            display: block;
+
+            &__list{
+                display: flex;
+                height: 166px;
+                max-width: 1320px;
+                flex-wrap: wrap;
+                margin-left: 15px;
+                margin-bottom: 24px;
+                overflow: hidden;
             }
 
-            &__container{
-                padding: 0 24px;
-                width: 70%;
-            }
-
-            &__img{
+            &__item{
+                width: 224px;
+                height: 72px;
+                margin-right: 15px;
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 0 16px;
+                background-color: #FFFFFF;
+                border: 1px solid #EAEAEA;
                 border-radius: 6px;
+                cursor: pointer;
+            }
 
+            &__link{
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__btn{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border: 1px solid $btnColor;
+                border-radius: 100%;
+                color: $btnColor;
+                transition-duration: .4s;
+                top: 15px;
+                left: 160px;
+
+                &::after{
+                    content: "\e900";
+                }
+
+                &:hover{
+                    background-color: $btnColor;
+                }
+
+                &:hover::after{
+                    color: #fff;
+                }
+
+                &:active{
+                    background-color: #fff;
+                }
+
+                &:active::after{
+                    color: $btnColor;
+                }
+            }
+        }
+
+        // Слайдер скрыт после 768px
+        .swiper-type--nav{
+            display: none;
+        }
+
+        .service-type-tab{
+            display: block;
+
+            &__list{
+                height: 160px;
+                margin-left: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+                max-width: 1320px;
+
+
+            }
+
+            &__item{
+                width: 225px;
+                height: 160px;
+                margin-right: 15px;
+                border: 1px solid #EAEAEA;
+                border-radius: 6px;
+                background-color: #ffffff;
+                cursor: pointer;
+            }
+        
+            &__link{
+                color: $txtColor;
+            }
+        
+            &__title{
+                position: absolute;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 16px 0 0 16px;
+            }
+
+            &__btn{
+                display: block;
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                border: 1px solid #FF3E79;
+                top: 100px;
+                left: 165px;
+        
+                &::after{
+                    content: '\e900';
+                    color: #FF3E79;
+                    position: absolute;
+                    top: 10px;
+                    left: 15px;  
+                }
+        
+                &:hover{
+                    background-color: #FF3E79;
+                    transition-duration: .7s;
+                }
+        
+                &:hover::after{
+                    color: #fff;
+                }
+        
+                &:active{
+                    background-color: #fff;
+                }
+        
+                &:active::after{
+                    color: #FF3E79;
+                }
             }
         }
 
         .service-price{
-            // display: none;
             
+            // Слайдер скрыт после 768px
+            .swiper-price--nav{
+                display: none;
+            }
+
+            .service-price-tab{
+                display: block;
+
+                &__list{
+                    margin: 0 15px 25px;
+                    border: 1px solid #EAEAEA;
+                    border-radius: 6px;
+                    background-color: #ffffff;
+                }
+
+                &__item{
+                    height: 62px;
+                    position: relative;
+
+                    &:nth-child(2)::before{
+                        content: '';
+                        position: absolute;
+                        width: 96%;
+                        transform: translate(2%);
+                        border-top: 1px solid #EAEAEA;
+                    }
+                    &:nth-child(3)::before{
+                        content: '';
+                        position: absolute;
+                        width: 96%;
+                        transform: translate(2%);
+                        border-top: 1px solid #EAEAEA;
+                    }
+                    &:nth-child(4)::before{
+                        content: '';
+                        position: absolute;
+                        width: 96%;
+                        transform: translate(2%);
+                        border-top: 1px solid #EAEAEA;
+                    }
+                    &:nth-child(5)::before{
+                        content: '';
+                        position: absolute;
+                        width: 96%;
+                        transform: translate(2%);
+                        border-top: 1px solid #EAEAEA;
+                    }
+                }
+            
+                &__link{
+                    height: 100%;
+                    padding: 0 24px;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: $txtColor;
+                }
+
+                &__text{
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 18px;
+
+                    &:nth-child(1){
+                        width: 40%;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3){
+                        width: 15%;
+                    }
+                }
+
+                &__btn{
+                    align-items: center;
+                    border: 1px solid  #FF3E79;
+                    color: $btnColor;
+                    width: 120px;
+                    height: 32px;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    top: 155px;
+                    left: 115px;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    line-height: 24px;
+                    font-weight: 700; 
+                    transition-duration: 0.5s;
+        
+                    
+                    &::after{
+                        content: '\e900';
+                        margin-left: 8px;
+                    }
+        
+                    &:hover{
+                        background-color: #FF3E79;
+                        color: #fff;
+                    }
+        
+                    &:active{
+                        background-color: #fff;
+                        color: #FF3E79;
+                    }
+                }
+            }
+            
+
             &__text{
                 width: 430px;
             }
 
             &__link{
                 width: 400px;
-                margin-left: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+
+                &::after{
+                    content: "\e900";
+                    position: absolute;
+                    font-size: 12px;
+                    top: 7px;
+                    left: 290px;
+                }
             }
         }
         
     }
 
     .cps-footer{
+        margin-top: 47px;
         
         .footer-list{
             display: flex;
@@ -1892,6 +2228,11 @@ body{
     }
 
 }
+
+
+
+
+
 
 
 
@@ -1963,7 +2304,7 @@ body{
                 &::before {
                     content: '';
                     position: absolute;
-                    top: 0;
+                    top: -4px;
                     left: -14px;
                     width: 4px;
                     height: 29px;
@@ -2034,12 +2375,38 @@ body{
     } 
 
     .cps-main{
-        padding-left: 306px;
+        padding-left: 315px;
 
         .service-content{
 
+            &__title{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 23px;
+                    left: -9px;
+                }
+            }
+
             &__list{
                 display: flex;
+            }
+
+            .service-item{
+
+                &__container{
+                    padding: 0;
+                }
+
+                &__text{
+                    padding: 0;
+                    width: 70%;
+                }
+
+                &__img{
+                    width: 65%;
+                }
             }
         }
     }
@@ -2057,7 +2424,7 @@ body{
     }
      
     .cps-footer{
-        padding-left: 236px;
+        padding-left: 315px;
 
     }
 }
