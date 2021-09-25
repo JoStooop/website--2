@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/iconsFont.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style-slider.css">
+    <link rel="stylesheet" href="css/swiper.css">
 </head>
 <body>
+
+
     <header class="cps-header">
         <div class="cps-header__burger">
             <span></span>
@@ -41,8 +42,13 @@
             </li>
         </ul>           
     </header>
+
+
     <aside class="cps-aside">
-        <div class="cps-aside__header">
+        <div class="cps-aside__header"> 
+            <button class="cps-aside__closed">
+                <span class="cps-aside__closed-btn"></span>
+            </button>
             <a href="#" class="cps-aside__logo cps-logo">
                 <picture>
                     <img src="img/cps-logo-img.svg" alt="cps logo" class="cps-logo__img">
@@ -109,29 +115,44 @@
             </li>
         </ul>
     </aside>
+
+
     <main class="cps-main">
         <section class="service-content">
             <div class="service-content__header">
                 <h1 class="service-content__title">Услуги и сервисы</h1>
+                <ul class="service-content__list">
+                    <li class="service-content__item">
+                        <span class="service-content__text">Оставить заявку</span>
+                        <button class="service-content__link button icon-service"></button>
+                    </li>
+                    <li class="service-content__item">
+                        <span class="service-content__text">Статус ремонта</span>
+                        <button class="service-content__link button icon-search-2"></button>
+                    </li>
+                </ul> 
             </div>
-            <div class="swiper mySwiper slider-service">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider-service__item">
-                        <a class="slider-service__link" href="#">Ремонтируемые устройства</a>
-                    </div>
-                    <div class="swiper-slide slider-service__item">
-                        <a class="slider-service__link" href="#">Цены на услуги</a>
-                    </div>
-                    <div class="swiper-slide slider-service__item">
-                        <a class="slider-service__link" href="#">Адреса сервисных центров</a>
-                    </div>
-                    <div class="swiper-slide slider-service__item">
-                        <a class="slider-service__link" href="#">Специальные цены</a>
-                    </div>
-                    <div class="swiper-slide slider-service__item">
-                        <a class="slider-service__link" href="#">Отзывы</a>
-                    </div>
-                </div>
+            <div class="swiper swiper-container swiper-service--nav">
+                <ul class="swiper-wrapper swiper-service--nav__list">
+                    <li class="swiper-slide swiper-service--nav__item">
+                        <a href="#" class="swiper-service--nav__link" data-path="one">Ремонтируемые бренды</a>
+                    </li>
+                    <li class="swiper-slide swiper-service--nav__item">
+                        <a href="#" class="swiper-service--nav__link" data-path="one">Ремонтируемые устройства</a>
+                    </li>
+                    <li class="swiper-slide swiper-service--nav__item">
+                        <a href="#" class="swiper-service--nav__link" data-path="one">Цены на услуги</a>
+                    </li>
+                    <li class="swiper-slide swiper-service--nav__item">
+                        <a href="#" class="swiper-service--nav__link" data-path="one">Адреса сервисных центров</a>
+                    </li>
+                    <li class="swiper-slide swiper-service--nav__item">
+                        <a href="#" class="swiper-service--nav__link" data-path="one">Специальные цены</a>
+                    </li>
+                    <li class="swiper-slide swiper-service--nav__item">
+                        <a href="#" class="swiper-service--nav__link" data-path="one">Отзывы</a>
+                    </li>
+                </ul>
             </div>
             <div class="service-content__service-item service-item">
                 <div class="service-item__container">
@@ -148,91 +169,103 @@
             <h2 class="service-brands__title">
                 Ремонт техники различных брендов
             </h2>
-            <div class="swiper mySwiper slider-brands">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link " href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_lenovo.png" alt="Lenovo">
-                            <button class="slider-brands__btn  button-arrow icon-arrow"></button>
+            <div class="swiper swiper-container swiper-brands--nav">
+                <ul class="swiper-wrapper swiper-brands--nav__list">
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_lenovo.png" alt="Lenovo" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                    <a class="slider-brands__link" href="#">
-                        <img class="slider-brands__img" src="img/slider-brands_samsung.png" alt="Samsung">
-                        <button class="slider-brands__btn button-arrow icon-arrow"></button>
-                    </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link" href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_apple.png" alt="Apple">
-                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_samsung.png" alt="Samsung" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link" href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_viewsonic.png" alt="ViewSonic">
-                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_apple.png" alt="Apple" class="swiper-brands--nav__img">
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_viewsonic.png" alt="ViewSonic" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link" href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_bosch.png" alt="Bosch">
-                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_bosch.png" alt="Bosch" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link" href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_hp.png" alt="Hp">
-                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_hp.png" alt="Hp" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link" href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_acer.png" alt="Acer">
-                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_acer.png" alt="Acer" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-brands__item">
-                        <a class="slider-brands__link" href="#">
-                            <img class="slider-brands__img" src="img/slider-brands_sony.svg" alt="Sony">
-                            <button class="slider-brands__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-brands--nav__item">
+                        <a href="#" class="swiper-brands--nav__link">
+                            <img src="img/slider-brands_sony.svg" alt="Sony" class="swiper-brands--nav__img"> 
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul> 
             </div>
         </section>
         <section class="service-type">
             <h2 class="service-type__title">
                 Ремонт различных видов техники
             </h2>
-            <div class="swiper mySwiper slider-type">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slider-type__item">
-                        <a href="#" class="slider-type__link">
-                            <h3 class="slider-type__text">Ремонт ноутбуков</h3>
-                            <button class="slider-type__btn button-arrow icon-arrow"></button>
+            <div class="swiper swiper-container swiper-type--nav">
+                <ul class="swiper-wrapper swiper-type--nav__list">
+                    <li class="swiper-slide swiper-type--nav__item">
+                        <a href="#" class="swiper-type--nav__link">
+                            <span class="swiper-type--nav__title">Ремонт ноутбуков</span>
+                            <button class="swiper-type--nav__btn"></button>
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-type__item">
-                        <a href="#" class="slider-type__link">
-                            <h3 class="slider-type__text">Ремонт планшетов</h3>
-                            <button class="slider-type__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-type--nav__item">
+                        <a href="#" class="swiper-type--nav__link">
+                            <span class="swiper-type--nav__title">Ремонт планшетов</span>
+                            <button class="swiper-type--nav__btn"></button>
                         </a>
-                    </div>
-                    <div class="swiper-slide slider-type__item">
-                        <a href="#" class="slider-type__link">
-                            <h3 class="slider-type__text">Ремонт ПК</h3>
-                            <button class="slider-type__btn button-arrow icon-arrow"></button>
+                    </li>
+                    <li class="swiper-slide swiper-type--nav__item">
+                        <a href="#" class="swiper-type--nav__link">
+                            <span class="swiper-type--nav__title">Ремонт ПК</span>
+                            <button class="swiper-type--nav__btn"></button>
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="service-price">
             <h2 class="service-price__title">
                 Цены на услуги
             </h2>
-            <div class="swiper mySwiper slider-price">
+            <div class="swiper swiper-container swiper-price--nav">
+                <ul class="swiper-wrapper swiper-price--nav__list">
+                    <li class="swiper-slide swiper-price--nav__item">
+                        <a href="#" class="swiper-price--nav__link price-link">
+                            <div class="price-link__header">
+                                <h3 class="price-link__title">Ремонтные услуги</h3>
+                                <span class="price-link__subtitle">Диагностика</span>
+                            </div>
+                            <div class="price-link__main">
+                                <h3 class="price-link__title">Цена</h3>
+                                <span class="price-link__subtitle">Бесплатно</span>
+                            </div>
+                            <div class="price-link__footer">
+                                <h3 class="price-link__title">Срок</h3>
+                                <span class="price-link__subtitle">30 мин</span>
+                            </div>
+                            <button class="price-link__btn">Заказать</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="swiper mySwiper slider-price">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slider-price__item">
                         <a href="#" class="slider-price__link">
@@ -256,11 +289,124 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <p class="service-price__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
             <a href="#" class="service-price__link">Получить коммерческое предложение</a>   
         </section>
     </main> 
+
+
+
+    <!-- Обратная связь -->
+    <section class="cps-popap-feedback">
+        <button class="cps-popap-feedback__btn-closed">
+            <span class="cps-popap-feedback__elm-btn"></span>
+        </button>
+        <form class="cps-popap-feedback__fb-form fb-form" action="#" method="POST" enctype="multipart/form-data">
+            <h2 class="cps-popap-feedback__title">Обратная связь</h2>
+            <label for="fb-form__name">
+                <span class="fb-form__visually-hidden">Имя</span>
+                <input class="fb-form__input" type="text" name="name" placeholder="Имя" required="required" id="fb-form__name">
+            </label>
+            <label for="fb-form__phone">
+                <span class="fb-form__visually-hidden">Телефон</span>
+                <input class="fb-form__input" type="text" name="phone" placeholder="Телефон" required="required" id="fb-form__phone">
+            </label>
+            <label for="fb-form__email">
+                <span class="fb-form__visually-hidden">Элетронная почта</span>
+                <input class="fb-form__input" type="email" name="email" placeholder="Элетронная почта" required="required" id="fb-form__email">
+            </label>
+            <label for="fb-form__message">
+                <span class="fb-form__visually-hidden">Сообщение</span>
+                <textarea class="fb-form__textarea" placeholder="Сообщение" id="b-form__message"></textarea>
+            </label>
+            <p class="fb-form__text">
+                Нажимая “отправить”, вы даете согласие на <span class="fb-form__text-person-info">обработку персональных данных</span>
+                и соглашаетесь с нашей <a class="fb-form__text-privacy-policy" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="fb-form__btn icon" type="submit">Отправить</button>
+        </form>
+        <div class="cps-popap-feedback__bg-left"></div>
+    </section>
+    <!-- Статус ремонта -->
+    <section class="cps-popap-repair">
+        <button class="cps-popap-repair__btn-closed">
+            <span class="cps-popap-repair__elm-btn"></span>
+        </button>
+        <form class="cps-popap-repair__form form-repair" action="#" method="POST" enctype="multipart/form-data">
+            <h2 class="cps-popap-repair__title">Статус ремонта</h2>
+            <label for="form-repair__name">
+                <span class="form-repair__visually-hidden">Телефон</span>
+                <input class="form-repair__input" type="text" name="name" placeholder="Телефон" required="required" id="form-repair__name">
+            </label>
+            <p class="form-repair__text">
+                Нажимая “отправить”, вы даете согласие на <span class="form-repair__text-person-info">обработку персональных данных</span>
+                и соглашаетесь с нашей <a class="form-repair__text-privacy-policy" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="form-repair__btn icon" type="submit">Отправить</button>
+        </form>
+        <div class="cps-popap-repair__bg-left"></div>
+    </section>
+    <!-- Вход в личный кабинет -->
+    <section class="cps-popap-account">
+        <button class="cps-popap-account__btn-closed">
+            <span class="cps-popap-account__elm-btn"></span>
+        </button>
+        <form class="cps-popap-account__form form-account" action="#" method="POST" enctype="multipart/form-data">
+            <h2 class="cps-popap-account__title">Вход в личный кабинет</h2>
+            <label for="form-account__name">
+                <span class="form-account__visually-hidden">Телефон</span>
+                <input class="form-account__input" type="text" name="name" placeholder="Телефон" required="required" id="form-account__name">
+            </label>
+            <p class="form-account__text">
+                Нажимая “отправить”, вы даете согласие на <span class="form-account__text-person-info">обработку персональных данных</span>
+                и соглашаетесь с нашей <a class="form-account__text-privacy-policy" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="form-account__btn icon" type="submit">Отправить</button>
+        </form>
+        <div class="cps-popap-account__bg-left"></div>
+    </section>
+    <!-- Начать чат -->
+    <section class="cps-popap-chat">
+        <button class="cps-popap-chat__btn-closed">
+            <span class="cps-popap-chat__elm-btn"></span>
+        </button>
+        <form class="cps-popap-chat__form form-chat" action="#" method="POST" enctype="multipart/form-data">
+            <h2 class="cps-popap-chat__title">Начать чат</h2>
+            <label for="form-chat__name">
+                <span class="form-chat__visually-hidden">Телефон</span>
+                <input class="form-chat__input" type="text" name="name" placeholder="Телефон" required="required" id="form-chat__name">
+            </label>
+            <p class="form-chat__text">
+                Нажимая “отправить”, вы даете согласие на <span class="form-chat__text-person-info">обработку персональных данных</span>
+                и соглашаетесь с нашей <a class="form-chat__text-privacy-policy" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="form-chat__btn icon" type="submit">Отправить</button>
+        </form>
+        <div class="cps-popap-chat__bg-left"></div>
+    </section>
+    <!-- Заказать звонок -->
+    <section class="cps-popap-call">
+        <button class="cps-popap-call__btn-closed">
+            <span class="cps-popap-call__elm-btn"></span>
+        </button>
+        <form class="cps-popap-call__form form-call" action="#" method="POST" enctype="multipart/form-data">
+            <h2 class="cps-popap-call__title">Заказать звонок</h2>
+            <label for="form-call__name">
+                <span class="form-call__visually-hidden">Телефон</span>
+                <input class="form-call__input" type="text" name="name" placeholder="Телефон" required="required" id="form-call__name">
+            </label>
+            <p class="form-call__text">
+                Нажимая “отправить”, вы даете согласие на <span class="form-call__text-person-info">обработку персональных данных</span>
+                и соглашаетесь с нашей <a class="form-call__text-privacy-policy" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="form-call__btn icon" type="submit">Отправить</button>
+        </form>
+        <div class="cps-popap-call__bg-left"></div>
+    </section>
+
+
+
     <footer class="cps-footer">
             <ul class="cps-footer__footer-list footer-list">
                 <li class="footer-list__item footer-list__container">
@@ -273,7 +419,13 @@
                 <li class="footer-list__item">Информация, размещена на данной странице, не является публичной офертой</li>
             </ul>
     </footer>
-    <script src="js/swiper-bundle.min.js"></script>
+
+
+
+
+
+    <script src="js/pop-up-windows.js"></script>
+    <script src="js/swiper-bundle.js"></script>
     <script src="js/initialize-swiper.js"></script>
     <script src="js/read-more.js"></script>
 </body>

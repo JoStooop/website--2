@@ -10,8 +10,8 @@
   font-display: block;
 }
 
-[class^="icon-"]::before,
- [class*=" icon-"]::before {
+[class^="icon"]::before, ::after,
+ [class*=" icon"]::before, ::after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
