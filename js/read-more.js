@@ -1,4 +1,4 @@
-
+// Информация
 function openbox(id) {
 
 display = document.getElementById(id).style.display;
@@ -12,3 +12,9 @@ display = document.getElementById(id).style.display;
         document.getElementById(id).style.display='none';
     }
 }
+
+
+
+
+
+

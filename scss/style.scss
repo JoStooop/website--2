@@ -2081,6 +2081,24 @@ body{
             .service-price-tab{
                 display: block;
 
+                &__info{
+                    display: flex;
+                    padding: 0 38px;
+                    margin-bottom: 15px;
+                    color: #7E7E82;
+                    font-size: 14px;
+                    opacity: .7;
+                }
+                &__info-title{
+                   width: 44%;
+                }
+                &__info-subtitle{
+
+                    &:nth-child(2){
+                        width: 19%;
+                    }
+                }
+
                 &__list{
                     margin: 0 15px 25px;
                     border: 1px solid #EAEAEA;
@@ -2406,6 +2424,23 @@ body{
 
                 &__img{
                     width: 65%;
+                }
+            }
+        }
+
+        .service-price{
+
+            .service-price-tab{
+
+                &__info-title{
+                    width: 46%;
+                }
+
+                &__info-subtitle{
+
+                    &:nth-child(2){
+                    width: 21%;
+                    }
                 }
             }
         }

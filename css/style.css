@@ -2188,6 +2188,22 @@ body {
   .cps-main .service-price .service-price-tab {
     display: block;
   }
+  .cps-main .service-price .service-price-tab__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 38px;
+    margin-bottom: 15px;
+    color: #7E7E82;
+    font-size: 14px;
+    opacity: .7;
+  }
+  .cps-main .service-price .service-price-tab__info-title {
+    width: 44%;
+  }
+  .cps-main .service-price .service-price-tab__info-subtitle:nth-child(2) {
+    width: 19%;
+  }
   .cps-main .service-price .service-price-tab__list {
     margin: 0 15px 25px;
     border: 1px solid #EAEAEA;
@@ -2486,6 +2502,12 @@ body {
   }
   .cps-main .service-content .service-item__img {
     width: 65%;
+  }
+  .cps-main .service-price .service-price-tab__info-title {
+    width: 46%;
+  }
+  .cps-main .service-price .service-price-tab__info-subtitle:nth-child(2) {
+    width: 21%;
   }
   .cps-popap-feedback .fb-form {
     margin: 0;
