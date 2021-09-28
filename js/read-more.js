@@ -49,22 +49,4 @@ typeBtn.addEventListener('click', function(){
     typeBtn.classList.toggle('service-type-tab__btn-read-active')
 })
 
-// const readMore = document.querySelectorAll('.service-item__btn')
-
-// for (const btnReadMore of readMore){
-//     btnReadMore.addEventListener('click', () => {
-
-//         clearActive()
-
-//         btnReadMore.classList.add('service-item__btn-active')
-//     })
-// }
-
-// function clearActive(){
-//     readMore.forEach((slide) => {
-//         btnReadMore.classList.remove('active')
-//     })
-// }
-
-
 

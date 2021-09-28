@@ -521,7 +521,7 @@ body {
   font-weight: 400;
   padding: 0 16px;
   overflow: hidden;
-  height: 100px;
+  height: 80px;
   position: relative;
 }
 
@@ -547,6 +547,10 @@ body {
   left: -16px;
   -webkit-transition-duration: 0.7s;
           transition-duration: 0.7s;
+}
+
+.cps-main .service-content .service-item__btn:hover {
+  color: #41F6D7;
 }
 
 .cps-main .service-content .service-item__btn-active::before {
@@ -902,8 +906,8 @@ body {
   border-left: 1px solid #d9fff5;
   -webkit-box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
           box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-  z-index: 999;
-  opacity: 0;
+  z-index: 99;
+  opacity: 0.9;
 }
 
 .cps-popap-feedback__active {
@@ -949,6 +953,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 60px;
+  z-index: 100;
 }
 
 .cps-popap-feedback .fb-form__visually-hidden {
@@ -2151,6 +2156,9 @@ body {
     -webkit-transition-duration: 0.7s;
             transition-duration: 0.7s;
   }
+  .cps-main .service-brands-tab__btn-read:hover {
+    color: #41F6D7;
+  }
   .cps-main .service-brands-tab__btn-read-active::before {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -2240,6 +2248,9 @@ body {
     left: -16px;
     -webkit-transition-duration: 0.7s;
             transition-duration: 0.7s;
+  }
+  .cps-main .service-type-tab__btn-read:hover {
+    color: #41F6D7;
   }
   .cps-main .service-type-tab__btn-read-active::before {
     -webkit-transform: rotate(180deg);
@@ -2567,10 +2578,10 @@ body {
     width: 65%;
   }
   .cps-main .service-price .service-price-tab__info-title {
-    width: 46%;
+    width: 47.5%;
   }
   .cps-main .service-price .service-price-tab__info-subtitle:nth-child(2) {
-    width: 21%;
+    width: 22%;
   }
   .cps-popap-feedback .fb-form {
     margin: 0;

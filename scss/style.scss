@@ -372,7 +372,7 @@ body {
                 font-weight: 400;
                 padding: 0 16px;
                 overflow: hidden;
-                height: 100px;
+                height: 80px;
                 position: relative;
             }
 
@@ -396,6 +396,10 @@ body {
                     top: 0;
                     left: -16px;
                     transition-duration: 0.7s;
+                }
+
+                &:hover{
+                    color: $aimColor
                 }
             }
 
@@ -729,8 +733,8 @@ body {
     background-color: #ffffff;
     border-left: 1px solid #d9fff5;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-    z-index: 999;
-    opacity: 0;
+    z-index: 99;
+    opacity: 0.9;
 
     &__active {
         right: 0;
@@ -768,6 +772,7 @@ body {
         display: flex;
         flex-direction: column;
         margin-top: 60px;
+        z-index: 100;
 
         &__visually-hidden {
             position: absolute;
@@ -917,7 +922,7 @@ body {
     // &__bg-left{
     //     position: fixed;
     //     top: 0;
-    //     right: 440px;
+    //     right: -100%;
     //     display: flex;
     //     width: 100vw;
     //     height: 100vh;
@@ -1917,6 +1922,9 @@ body {
                     left: -16px;
                     transition-duration: 0.7s;
                 }
+                &:hover{
+                    color: $aimColor
+                }
             }
 
             &__btn-read-active{
@@ -2020,6 +2028,10 @@ body {
                     top: 0;
                     left: -16px;
                     transition-duration: 0.7s;
+                }
+
+                &:hover{
+                    color: $aimColor
                 }
             }
 
@@ -2358,12 +2370,12 @@ body {
         .service-price {
             .service-price-tab {
                 &__info-title {
-                    width: 46%;
+                    width: 47.5%;
                 }
 
                 &__info-subtitle {
                     &:nth-child(2) {
-                        width: 21%;
+                        width: 22%;
                     }
                 }
             }
