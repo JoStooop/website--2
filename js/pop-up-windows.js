@@ -1,22 +1,23 @@
 
-// Открытие бургера (боковое меню)
-const burger = document.querySelector('.cps-header__burger')
-const aside = document.querySelector('.cps-aside')
+const popupCpsAside = document.querySelector('.cps-aside')
+
+const openCpsBurger = document.querySelectorAll('.cps-header__burger')
+const closedCpsBurger = document.querySelector('.cps-aside__closed')
  
-burger.addEventListener('click', function(){
-     
-    aside.classList.add('cps-aside__aside-active')
+// Открытие бокового окна (навигационное меню)
+openCpsBurger.forEach((button) => {
+    button.addEventListener('click', (i) => {
+        i.preventDefault()
+
+        popupCpsAside.classList.add('cps-aside__aside-active')
+    })
 })
 
-// Закрытие бургера (боковое меню)
-const closedAside = document.querySelector('.cps-aside__closed')
+// Закрытие бокового окна (навигационное меню)
+closedCpsBurger.addEventListener('click', () => {
 
-closedAside.addEventListener('click', function(){
-
-    aside.classList.add('cps-aside__aside-closed')
+    popupCpsAside.classList.remove('cps-aside__aside-active')
 })
-
-
 
 
 
@@ -45,12 +46,15 @@ closedAside.addEventListener('click', function(){
 //     feedbackWindow.classList.toggle('cps-popap-feedback__closed')
 // })
 
+
+
 const popup = document.querySelector('.cps-popap-feedback')
 const popupBg = document.querySelector('.cps-popap-feedback__bg-left')
 
 const openPopupButtons = document.querySelectorAll('.icon-service')
 const closePopupButton = document.querySelector('.cps-popap-feedback__btn-closed')
 
+// Открытие "Обратная связь"
 openPopupButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
@@ -61,6 +65,7 @@ openPopupButtons.forEach((button) => {
     })
 })
 
+// Закрытие "Обратная связь" 
 closePopupButton.addEventListener('click',() => { 
 
     popup.classList.remove('cps-popap-feedback__active');
@@ -68,12 +73,14 @@ closePopupButton.addEventListener('click',() => {
 
 });
 
-document.addEventListener('click', (ii) => { // Вешаем обработчик на весь документ
+// // Закрытие "Обратная связь" при нажатии на фон
+document.addEventListener('click', (i) => { 
 
-    if(ii.target === popupBg) { // Если цель клика - фот, то:
+    if(i.target === popupBg) { // i.цель - фон, то
 
-        popupBg.classList.remove('active'); // Убираем активный класс с фона
-        popup.classList.remove('cps-popap-feedback__active'); // И с окна
+        popup.classList.remove('cps-popap-feedback__active'); 
+        popupBg.classList.remove('active'); 
+
     }
 });
 
@@ -87,28 +94,41 @@ document.addEventListener('click', (ii) => { // Вешаем обработчи�
 
 
 
+
+
+
+
+const popupRepair = document.querySelector('.cps-popap-repair')
+const popupRepairBg = document.querySelector('.cps-popap-repair__bg-left')
+
+const openPopupRepairBtn = document.querySelectorAll('.icon-search-2')
+const closedPopupRepairBtn = document.querySelector('.cps-popap-repair__btn-closed')
+
 // Открытие "Статус ремонта"
-const repair = document.querySelector('.icon-search-2')
-const repairWindow = document.querySelector('.cps-popap-repair')
- 
-repair.addEventListener('click', function(){
-     
-    repairWindow.classList.toggle('cps-popap-repair__active')
+openPopupRepairBtn.forEach((button) => {
+    button.addEventListener('click', (i) => {
+        i.preventDefault();
+
+        popupRepair.classList.add('cps-popap-repair__active')
+        popupRepairBg.classList.add('active')
+    })
 })
 
 // Закрытие "Статус ремонта" 
-const repairWindowClosed = document.querySelector('.cps-popap-repair__btn-closed')
-const repairBgLeftClosed = document.querySelector('.cps-popap-repair__bg-left')
+closedPopupRepairBtn.addEventListener('click', () => {
 
- 
-repairWindowClosed.addEventListener('click', function(){
-     
-    repairWindow.classList.toggle('cps-popap-repair__closed')
+    popupRepair.classList.remove('cps-popap-repair__active')
+    popupRepairBg.classList.remove('active')
 })
 
-repairBgLeftClosed.addEventListener('click', function(){
-     
-    repairWindow.classList.toggle('cps-popap-repair__closed')
+// Закрытие "Статус ремонта" при нажатии на фон
+document.addEventListener('click', (i) => {
+
+    if (i.target === popupRepairBg){
+
+        popupRepair.classList.remove('cps-popap-repair__active'); 
+        popupRepairBg.classList.remove('active')
+    }
 })
 
 
@@ -116,29 +136,46 @@ repairBgLeftClosed.addEventListener('click', function(){
 
 
 
+
+
+
+
+
+
+
+
+
+const popupAccount = document.querySelector('.cps-popap-account')
+const popupAccountBg = document.querySelector('.cps-popap-account__bg-left')
+
+const openPopupAccountBtn = document.querySelectorAll('.icon-user')
+const closedPopupAccountBtn = document.querySelector('.cps-popap-account__btn-closed')
 
 // Открытие "Личный кабинет"
-const account = document.querySelector('.icon-user')
-const accountWindow = document.querySelector('.cps-popap-account')
- 
-account.addEventListener('click', function(){
-     
-    accountWindow.classList.toggle('cps-popap-account__active')
+openPopupAccountBtn.forEach((button) => {
+    button.addEventListener('click', (i) => {
+        i.preventDefault();
+
+        popupAccount.classList.add('cps-popap-account__active')
+        popupAccountBg.classList.add('active')
+    })
 })
 
 // Закрытие "Личный кабинет"
-const accountWindowClosed = document.querySelector('.cps-popap-account__btn-closed')
-const accountBgLeftClosed = document.querySelector('.cps-popap-account__bg-left')
+closedPopupAccountBtn.addEventListener('click', () => {
 
- 
-accountWindowClosed.addEventListener('click', function(){
-     
-    accountWindow.classList.toggle('cps-popap-account__closed')
+    popupAccount.classList.remove('cps-popap-account__active')
+    popupAccountBg.classList.remove('active')
 })
 
-accountBgLeftClosed.addEventListener('click', function(){
-     
-    accountWindow.classList.toggle('cps-popap-account__closed')
+// Закрытие "Личный кабинет" при нажатии на фон
+document.addEventListener('click', (i) => {
+
+    if (i.target === popupAccountBg){
+
+        popupAccount.classList.remove('cps-popap-account__active'); 
+        popupAccountBg.classList.remove('active')
+    }
 })
 
 
@@ -146,29 +183,47 @@ accountBgLeftClosed.addEventListener('click', function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+const popupChat = document.querySelector('.cps-popap-chat')
+const popupChatBg = document.querySelector('.cps-popap-chat__bg-left')
+
+const openPopupChatBtn = document.querySelectorAll('.icon-pop-up')
+const closedPopupChatBtn = document.querySelector('.cps-popap-chat__btn-closed')
 
 // Открытие "Начать чат"
-const chat = document.querySelector('.icon-pop-up')
-const chatWindow = document.querySelector('.cps-popap-chat')
- 
-chat.addEventListener('click', function(){
-     
-    chatWindow.classList.toggle('cps-popap-chat__active')
+openPopupChatBtn.forEach((button) => {
+    button.addEventListener('click', (i) => {
+        i.preventDefault();
+
+        popupChat.classList.add('cps-popap-chat__active')
+        popupChatBg.classList.add('active')
+    })
 })
 
 // Закрытие "Начать чат"
-const chatWindowClosed = document.querySelector('.cps-popap-chat__btn-closed')
-const chatBgLeftClosed = document.querySelector('.cps-popap-chat__bg-left')
+closedPopupChatBtn.addEventListener('click', () => {
 
- 
-chatWindowClosed.addEventListener('click', function(){
-     
-    chatWindow.classList.toggle('cps-popap-chat__closed')
+    popupChat.classList.remove('cps-popap-chat__active')
+    popupChatBg.classList.remove('active')
 })
 
-chatBgLeftClosed.addEventListener('click', function(){
-     
-    chatWindow.classList.toggle('cps-popap-chat__closed')
+// Закрытие "Начать чат" при нажатии на фон
+document.addEventListener('click', (i) => {
+
+    if (i.target === popupChatBg){
+
+        popupChat.classList.remove('cps-popap-chat__active'); 
+        popupChatBg.classList.remove('active')
+    }
 })
 
 
@@ -177,26 +232,98 @@ chatBgLeftClosed.addEventListener('click', function(){
 
 
 
-// Открытие "Заказать звонок"
-const call = document.querySelector('.icon-phone')
-const callWindow = document.querySelector('.cps-popap-call')
- 
-call.addEventListener('click', function(){
-     
-    callWindow.classList.toggle('cps-popap-call__active')
+
+
+
+
+
+
+
+
+
+
+const popupCall = document.querySelector('.cps-popap-call')
+const popupCallBg = document.querySelector('.cps-popap-call__bg-left')
+
+const openPopupCallBtn = document.querySelectorAll('.icon-phone')
+const closedPopupCallBtn = document.querySelector('.cps-popap-call__btn-closed')
+
+// Открытие "Обратная связь" 
+openPopupCallBtn.forEach((button) => {
+    button.addEventListener('click', (i) => {
+        i.preventDefault();
+
+        popupCall.classList.add('cps-popap-call__active')
+        popupCallBg.classList.add('active')
+    })
 })
 
-// Закрытие "Заказать звонок"
-const callWindowClosed = document.querySelector('.cps-popap-call__btn-closed')
-const callBgLeftClosed = document.querySelector('.cps-popap-call__bg-left')
+// Закрытие "Обратная связь" 
+closedPopupCallBtn.addEventListener('click', () => {
 
- 
-callWindowClosed.addEventListener('click', function(){
-     
-    callWindow.classList.toggle('cps-popap-call__closed')
+    popupCall.classList.remove('cps-popap-call__active')
+    popupCallBg.classList.remove('active')
 })
 
-callBgLeftClosed.addEventListener('click', function(){
-     
-    callWindow.classList.toggle('cps-popap-call__closed')
+// Закрытие "Обратная связь"  при нажатии на фон
+document.addEventListener('click', (i) => {
+
+    if (i.target === popupCallBg){
+
+        popupCall.classList.remove('cps-popap-call__active'); 
+        popupCallBg.classList.remove('active')
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const popupSearch = document.querySelector('.cps-popap-search')
+const popupSearchBg = document.querySelector('.cps-popap-search__bg-left')
+
+const openPopupSearchBtn = document.querySelectorAll('.icon-search')
+const closedPopupSearchBtn = document.querySelector('.cps-popap-search__btn-closed')
+
+// Открытие "Поиск" + закрытие бокового окна 'popupAside'
+openPopupSearchBtn.forEach((button) => {
+    button.addEventListener('click', (i) => {
+        i.preventDefault();
+
+        popupSearch.classList.add('cps-popap-search__active')
+        popupSearchBg.classList.add('active')
+
+        // Закрытие бокового окна с навигационным меню
+        popupCpsAside.classList.remove('cps-aside__aside-active')
+
+    })
+})
+
+// Закрытие "Поиск" 
+closedPopupSearchBtn.addEventListener('click', () => {
+
+    popupSearch.classList.remove('cps-popap-search__active')
+    popupSearchBg.classList.remove('active')
+})
+
+// Закрытие "Поиск"  при нажатии на фон
+document.addEventListener('click', (i) => {
+
+    if (i.target === popupSearchBg){
+
+        popupSearch.classList.remove('cps-popap-search__active'); 
+        popupSearchBg.classList.remove('active')
+    }
 })
