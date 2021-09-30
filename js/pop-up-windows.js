@@ -66,7 +66,7 @@ openPopupButtons.forEach((button) => {
 })
 
 // Закрытие "Обратная связь" 
-closePopupButton.addEventListener('click',() => { 
+closePopupButton.addEventListener('click', () => { 
 
     popup.classList.remove('cps-popap-feedback__active');
     popupBg.classList.remove('active');
