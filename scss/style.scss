@@ -727,25 +727,23 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40px 32px 0;
-    max-width: 440px;
     width: 100%;
     height: 100vh;
     background-color: #ffffff;
-    border-left: 1px solid #d9fff5;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     z-index: 99;
     opacity: 0.9;
+    transition-duration: 0.6s;
+
 
     &__active {
         right: 0;
-        transition-duration: 0.6s;
         opacity: 1;
     }
 
     &__closed {
         opacity: 0;
         right: -100%;
-        transition-duration: 0.6s;
     }
 
     &__title {
@@ -762,7 +760,7 @@ body {
             width: 3px;
             height: 40px;
             top: -6px;
-            left: -33px;
+            left: -32px;
             background-color: #41f6d7;
             border-radius: 2px;
         }
@@ -771,7 +769,7 @@ body {
     .fb-form {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        padding-top: 60px;
         z-index: 100;
 
         &__visually-hidden {
@@ -804,7 +802,7 @@ body {
             resize: none;
 
             &:focus,
-            :active {
+            &:active {
                 outline-color: #dedede;
             }
         }
@@ -918,17 +916,6 @@ body {
             transform: rotate(-0.63turn);
         }
     }
-
-    // &__bg-left{
-    //     position: fixed;
-    //     top: 0;
-    //     right: -100%;
-    //     display: flex;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     background-color: #FFFFFF;
-    //     opacity: 0.9;
-    // }
 }
 
 // Всплывающее окно "Статус ремонта"
@@ -939,13 +926,12 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40px 32px 0;
-    max-width: 440px;
+    // max-width: 440px;
     width: 100%;
     height: 100vh;
     background-color: #ffffff;
-    border-left: 1px solid #d9fff5;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-    z-index: 999;
+    z-index: 99;
     opacity: 0;
 
     &__active {
@@ -974,7 +960,7 @@ body {
             width: 3px;
             height: 40px;
             top: -6px;
-            left: -33px;
+            left: -32px;
             background-color: #41f6d7;
             border-radius: 2px;
         }
@@ -983,7 +969,9 @@ body {
     .form-repair {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        padding-top: 60px;
+        z-index: 100;
+
 
         &__visually-hidden {
             position: absolute;
@@ -1113,17 +1101,6 @@ body {
             transform: rotate(-0.63turn);
         }
     }
-
-    // &__bg-left{
-    //     position: fixed;
-    //     top: 0;
-    //     right: 440px;
-    //     display: flex;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     background-color: #FFFFFF;
-    //     opacity: 0.9;
-    // }
 }
 
 // Всплывающее окно "Вход в личный кабинет"
@@ -1134,11 +1111,10 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40px 32px 0;
-    max-width: 440px;
+    // max-width: 440px;
     width: 100%;
     height: 100vh;
     background-color: #ffffff;
-    border-left: 1px solid #d9fff5;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     z-index: 999;
     opacity: 0;
@@ -1169,7 +1145,7 @@ body {
             width: 3px;
             height: 40px;
             top: -6px;
-            left: -33px;
+            left: -32px;
             background-color: #41f6d7;
             border-radius: 2px;
         }
@@ -1178,7 +1154,7 @@ body {
     .form-account {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        padding-top: 60px;
 
         &__visually-hidden {
             position: absolute;
@@ -1329,11 +1305,10 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40px 32px 0;
-    max-width: 440px;
+    // max-width: 440px;
     width: 100%;
     height: 100vh;
     background-color: #ffffff;
-    border-left: 1px solid #d9fff5;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     z-index: 999;
     opacity: 0;
@@ -1364,7 +1339,7 @@ body {
             width: 3px;
             height: 40px;
             top: -6px;
-            left: -33px;
+            left: -32px;
             background-color: #41f6d7;
             border-radius: 2px;
         }
@@ -1373,7 +1348,7 @@ body {
     .form-chat {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        padding-top: 60px;
 
         &__visually-hidden {
             position: absolute;
@@ -1524,11 +1499,10 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40px 32px 0;
-    max-width: 440px;
+    // max-width: 440px;
     width: 100%;
     height: 100vh;
     background-color: #ffffff;
-    border-left: 1px solid #d9fff5;
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     z-index: 999;
     opacity: 0;
@@ -1559,7 +1533,7 @@ body {
             width: 3px;
             height: 40px;
             top: -6px;
-            left: -33px;
+            left: -32px;
             background-color: #41f6d7;
             border-radius: 2px;
         }
@@ -1568,7 +1542,7 @@ body {
     .form-call {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        padding-top: 60px;
 
         &__visually-hidden {
             position: absolute;
@@ -2189,6 +2163,209 @@ body {
             }
         }
     }
+
+    // Всплывающее окно "Обратная связь"
+    .cps-popap-feedback {
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+
+        &__title{
+            
+            &::before{
+                left: -34px;
+            }
+        }
+
+        &__bg-left{
+            width: 100%;
+            background-color: #fff;
+            opacity: 0.9;
+            order: 1;
+        }
+
+        .fb-form{
+            max-width: 440px;
+            padding-left: 32px;
+            padding-right: 32px;
+            position: relative;
+            background-color: #fff;
+            order: 3;
+            border-left: 1px solid #D9FFF5;
+        }
+
+        &__btn-closed{
+            top: 53px;
+            left: -65px;
+            position: absolute;
+            order: 2;
+        }
+    }
+
+    // Всплывающее окно "Статус ремонта"
+    .cps-popap-repair{
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+
+        &__title{
+            
+            &::before{
+                left: -34px;
+            }
+        }
+        
+
+        &__bg-left{
+            width: 100%;
+            background-color: #fff;
+            opacity: 0.9;
+            order: 1;
+        }
+
+        .form-repair{
+            max-width: 440px;
+            padding-left: 32px;
+            padding-right: 32px;
+            position: relative;
+            background-color: #fff;
+            border-left: 1px solid #D9FFF5;
+            order: 3;
+        }
+
+        &__btn-closed{
+            top: 53px;
+            left: -65px;
+            position: absolute;
+            order: 2;
+        } 
+    }
+
+    // Всплывающее окно "Вход в личный кабинет"
+    .cps-popap-account{
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+
+        &__title{
+            
+            &::before{
+                left: -34px;
+            }
+        }
+        
+
+        &__bg-left{
+            width: 100%;
+            background-color: #fff;
+            opacity: 0.9;
+            order: 1;
+        }
+
+        .form-account{
+            max-width: 440px;
+            padding-left: 32px;
+            padding-right: 32px;
+            position: relative;
+            background-color: #fff;
+            border-left: 1px solid #D9FFF5;
+            order: 3;
+        }
+
+        &__btn-closed{
+            top: 53px;
+            left: -65px;
+            position: absolute;
+            order: 2;
+        } 
+    }
+
+    // Всплывающее окно "Начать чат"
+    .cps-popap-chat{
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+
+        &__title{
+            
+            &::before{
+                left: -34px;
+            }
+        }
+        
+
+        &__bg-left{
+            width: 100%;
+            background-color: #fff;
+            opacity: 0.9;
+            order: 1;
+        }
+
+        .form-chat{
+            max-width: 440px;
+            padding-left: 32px;
+            padding-right: 32px;
+            position: relative;
+            background-color: #fff;
+            border-left: 1px solid #D9FFF5;
+            order: 3;
+        }
+
+        &__btn-closed{
+            top: 53px;
+            left: -65px;
+            position: absolute;
+            order: 2;
+        } 
+    }
+
+    // Всплывающее окно "Заказать звонок"
+    .cps-popap-call{
+        width: 100%;
+        padding: 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+
+        &__title{
+            
+            &::before{
+                left: -34px;
+            }
+        }
+
+        &__bg-left{
+            width: 100%;
+            background-color: #fff;
+            opacity: 0.9;
+            order: 1;
+        }
+
+        .form-call{
+            max-width: 440px;
+            padding-left: 32px;
+            padding-right: 32px;
+            position: relative;
+            background-color: #fff;
+            border-left: 1px solid #D9FFF5;
+            order: 3;
+        }
+
+        &__btn-closed{
+            top: 53px;
+            left: -65px;
+            position: absolute;
+            order: 2;
+        } 
+    }    
 
     .cps-footer {
         margin-top: 47px;

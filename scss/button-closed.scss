@@ -1,0 +1,53 @@
+.button-closed{
+    top: 36px;
+    left: 30px;
+    z-index: 999;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid $btnColor;
+    background-color: $btnColor;
+    transition-duration: 0.5s;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 22px;
+        top: 18px;
+        left: 8px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #fff;
+    }
+
+    &::before {
+        content: "";
+        transform: rotate(0.63turn);
+    }
+
+    &::after {
+        content: "";
+        transform: rotate(-0.63turn);
+    }
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    &:hover > span::before,
+    &:hover > span::after {
+        background-color: $btnColor;
+    }
+
+    &:active {
+        background-color: $btnColor;
+    }
+
+    &:active > span::before,
+    &:active > span::after {
+        background-color: #fff;
+    }
+}
+
